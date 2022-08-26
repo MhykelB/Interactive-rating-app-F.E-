@@ -40,7 +40,6 @@ submitRating(e){
 reloadUI(){
   document.location.reload()
 }
-
 }
 //
 const ui = new UI()
@@ -61,4 +60,7 @@ backBtn.addEventListener('click', (e)=>{
 ui.reloadUI()
 e.preventDefault()
 } )
+
+//or
+
 
