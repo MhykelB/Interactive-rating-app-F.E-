@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,700;1,400&display=swap');
+
+:root{
+    --BG-blue: hsl(216, 12%, 8%);
+    --Card-blue: hsl(213, 19%, 18%);
+    --starBG: hsl(212, 12%, 25%, 0.5);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  color: white;
+  outline: 2px solid black;
+  max-width: 1440px;
+  background: var(--BG-blue) ;
+  height: max-content;
+  font-size: 15px;
+  padding: 10em 0;
+  margin: 0 auto;
+  font-family: 'Overpass';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rating-box{
+background: var(--Card-blue);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.2rem;
+padding: 2rem;
+border-radius: 1em;
+}
+#star{
+  /* transform: scale(.6); */
+padding: .8em;
+border-radius: 50%;
+background:var(--starBG);
+margin-bottom: .5em;
+}
+.rating-box>p{
+  color: hsl(217, 12%, 63%);
+  line-height: 1.5em;
+  max-width: 350px;
+}
+.rating-box>h1{
+  font-size: 25px;
+  font-weight: 700;
+}
+#buttons{
+  display: flex;
+  gap: 2rem;
+}
+.button{
+  color: hsl(217, 12%, 63%);
+   border: 0;
+  background: var(--starBG);
+  box-shadow: none;
+  transform: scale(1.2);
+  padding:.8em 1.2em;
+  border-radius: 50%;
+  margin: .5em 0 ;
+}
+.button:hover{
+  color: white;
+  background: hsl(25, 97%, 53%); ;
+  
+}
+.submit{
+  background: hsl(25, 97%, 53%);
+  border: none;
+  color:hsl(0, 0%, 100%);
+  width: 100%;
+  border-radius:2em;
+  padding: .8em 0;
+  letter-spacing: .2em;
+  cursor: pointer;
+}
+.submit:hover{
+  background: white;
+  color: hsl(25, 97%, 53%);
+}
+/* --response window---- */
+.response{
+  border-radius: 1em;
+  max-width: fit-content;
+  outline: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 3em 2.0em;
+  background: var(--Card-blue);
+}
+.response>p:nth-of-type(1){
+  background: var(--starBG);
+  border-radius: 2em;
+  padding: .5em 1.2em;
+  color: hsl(25, 97%, 53%);
+  text-align: center;
+  font-weight: medium;
+  margin: 1em 0;
+}
+.response>p:nth-of-type(2){
+  line-height: 1.8em;
+  color: hwb(217 58% 33%);
+max-width: 23.5em;
+  text-align: center;
+}
+#backBtn{
+  width: 40%;
+}
+.toogleDisplay{
+  display: none;
+}
+.activeBtn{
+  background: hsl(217, 12%, 63%);
+  color: white
+}
