@@ -9,41 +9,29 @@ const backBtn = document.querySelector('#backBtn')
 //
 class UI{
   constructor(){}
-   uncolorOtherBtn(){
-  rateBtn.forEach((btn)=>{
-    if (btn.classList.contains('activeBtn')) //the conditional is not necessary
-       btn.classList.remove('activeBtn')
-  })
-   }
-  changeColor(btn){
-   btn.classList.toggle('activeBtn')
-  }
 selectRating(btn){
-  this.uncolorOtherBtn()
-  this.changeColor(btn)
+ rateBtn.forEach((btn)=>{
+btn.classList.remove('activeBtn')})
+btn.classList.toggle('activeBtn')
 }
 flipActiveWindow(){
+  rateBtn.forEach((btn)=>{
+  btn.classList.remove('activeBtn')})
   rateWindow.classList.toggle('toogleDisplay')
-  thankWindow.classList.toggle('toogleDisplay')
-}
-submitRating(e){
+  thankWindow.classList.toggle('toogleDisplay')}
+
+submitRating(){
   let currentBtn;
   rateBtn.forEach((btn)=>{
   if(btn.classList.contains('activeBtn')){
-    currentBtn = btn;
-    rating.innerHTML = currentBtn.innerHTML;
+  currentBtn = btn;
+  rating.innerHTML = currentBtn.innerHTML;
   maxrating.innerHTML = rateBtn.length
   this.flipActiveWindow()
-  }})
-  
-}
-reloadUI(){
-  document.location.reload()
-}
+  }})}
 }
 //
 const ui = new UI()
-// selecting the rating//
 rateBtn.forEach((button)=>{
   button.addEventListener('click', (e)=>{
 ui.selectRating(button)
@@ -57,10 +45,6 @@ e.preventDefault()
 })
 // Go Back 
 backBtn.addEventListener('click', (e)=>{
-ui.reloadUI()
-e.preventDefault()
-} )
-
-//or
-
+ui.flipActiveWindow()
+e.preventDefault()} )
 
